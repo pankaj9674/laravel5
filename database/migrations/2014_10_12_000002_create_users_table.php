@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
         });
     }
 
+  //  Schema::table('users', function($table) { $table->string('name', 50)->nullable()->change(); });
+
     /**
      * Reverse the migrations.
      *
