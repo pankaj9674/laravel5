@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+//Route::get('/home/{id}/{val}', function ($id,$val) {
+//
+//    return "The returned value is $id $val";
+//    return view('welcome');
+//});
+
+Route::get('/home/{id?}', function ($id=NULL) {
+
+    return "The returned value is $id";
     return view('welcome');
-});
+})->name('home');
+
+
+
