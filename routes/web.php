@@ -19,9 +19,26 @@
 
 Route::get('/home/{id?}', function ($id=NULL) {
 
-    return "The returned value is $id";
+  //  return "The returned value is $id";
     return view('welcome');
 })->name('home');
+/////////////////////////////////////////////////////////////////////////////
+Route::get('/login', function () {
+
+  //  return "The returned value is $id";
+    return view('login');
+})->name('login')->middleware('checkstring');
 
 
+Route::get('api/login', function () {
 
+  //  return "The returned value is $id";
+    return view('login');
+})->name('login')->middleware('checkstring');
+///////////////////////////////////////////////////////////////////////
+Route::get('/logout', function () {
+
+  //  return "The returned value is $id";
+    return view('logout');
+})->name('logout');
+////////////////////////////////////////////////////////////////////////
